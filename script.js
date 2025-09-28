@@ -1,4 +1,4 @@
-// Workout Builder - Dr. Sims Method JavaScript
+// Workout Builder - Research Backed Method JavaScript
 let selectedWeek = 1,
   selectedDay = "monday",
   selectedDuration = "standard",
