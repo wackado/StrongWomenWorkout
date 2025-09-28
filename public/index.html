@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Sims Workout Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Workout Builder - Evidence-Based Training</h1>
+        <p>
+          Build strength, power, and longevity with science-backed exercise
+          principles
+        </p>
+        <div class="info-box">
+          <p id="equipmentInfo">
+            <strong>Your Equipment:</strong> Complete equipment checklist to
+            customize workouts
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="grid">
+          <div>
+            <label>Training Level</label>
+            <select id="weekSelect" class="select">
+              <option value="1">Beginner - Foundation Building</option>
+              <option value="2">Intermediate - Progressive Loading</option>
+              <option value="3">Advanced - High Performance</option>
+            </select>
+
+            <label style="margin-top: 12px">Duration</label>
+            <select id="durationSelect" class="select">
+              <option value="standard">Standard Duration</option>
+              <option value="quick">Quick Session</option>
+              <option value="extended">Extended Session</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Day</label>
+            <select id="daySelect" class="select">
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+
+            <label style="margin-top: 12px">Location</label>
+            <select id="locationSelect" class="select">
+              <option value="home">Home</option>
+              <option value="gym">Gym</option>
+            </select>
+
+            <div style="margin-top: 12px">
+              <button
+                id="equipmentButton"
+                class="select"
+                style="
+                  width: 100%;
+                  text-align: left;
+                  cursor: pointer;
+                  background: #f3f4f6;
+                  border: 1px solid #d1d5db;
+                "
+              >
+                Equipment Checklist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex">
+          <h2 id="workoutTitle">Monday: Lower Body Strength</h2>
+          <span class="badge" id="workoutDuration">35 minutes</span>
+        </div>
+        <div class="flex-wrap" id="phasesList"></div>
+      </div>
+
+      <div id="exerciseSelection"></div>
+
+      <div class="card hidden" id="workoutSummary">
+        <h3>Your Custom Workout Summary</h3>
+        <div id="summaryContent"></div>
+      </div>
+
+      <div id="equipmentModal" class="modal hidden">
+        <div class="card modal-content">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 16px;
+            "
+          >
+            <h3 style="margin: 0">Equipment Checklist</h3>
+            <button
+              id="closeModal"
+              style="
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #6b7280;
+              "
+            >
+              ×
+            </button>
+          </div>
+          <div id="equipmentContent"></div>
+        </div>
+      </div>
+
+      <div
+        style="
+          margin-top: 32px;
+          text-align: center;
+          font-size: 14px;
+          color: #6b7280;
+        "
+      >
+        <p>Evidence-based training for women's health and performance</p>
+        <p style="margin-top: 4px">
+          Workout Builder • Science-backed training • Home equipment optimized
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
