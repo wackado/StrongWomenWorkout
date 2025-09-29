@@ -117,17 +117,17 @@ const exerciseOptions = {
         { name: 'Tabata Squats', reps: '20s work', weight: 'bodyweight', time: '8 rounds', rest: '10s only', description: 'Classic Tabata protocol: 20 seconds maximum effort squats, 10 seconds complete rest. Repeat 8 times (4 minutes total). Count reps - try to maintain pace across all 8 rounds.' }
     ],
     activation: [
-        { name: 'Arm Swings', reps: '8/dir', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Large arm circles forward then backward. Gradually increase circle size to warm shoulders.' },
-        { name: 'Light Squat Jumps', reps: '4 reps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Small squat jumps focusing on soft landings. Jump only 6-12 inches high for activation.' },
-        { name: 'Shoulder Squeezes', reps: '8 reps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Squeeze shoulder blades together, hold 2 seconds. Activates postural muscles.' },
-        { name: 'Leg Swings', reps: '8/leg', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Hold wall for balance, swing leg forward/back then side to side. Mobilizes hip joints.' },
-        { name: 'Torso Twists', reps: '8 each', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Rotate torso left and right keeping hips forward. Warms spine and core.' },
-        { name: 'Marching', reps: '20 steps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'March bringing knees to waist height. Gradually increase pace, activates core.' },
-        { name: 'Sun Salutation Flow', reps: '3 flows', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Mountain pose → forward fold → half lift → low lunge → downward dog → cobra → back to mountain. Warms entire body with flowing movement.' },
-        { name: 'Cat-Cow Warm-Up', reps: '8 reps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'On hands and knees, arch back (cow) then round spine (cat). Mobilizes spine and activates core for movement.' },
-        { name: 'Hip Circles', reps: '8/dir', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Hands on hips, make large circles. Keep feet planted, mobilizes hip joints.' },
-        { name: 'Dynamic Warrior Flow', reps: '5/side', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Step back to warrior I, flow to warrior III (standing balance), return to warrior I. Activates legs, core, and balance systems.' },
-        { name: 'Ankle Pumps', reps: '15/foot', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Point toes down then flex up. Activates calves and improves circulation.' }
+        { name: 'Arm Swings', reps: '10/dir', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Large arm circles forward then backward. Gradually increase circle size to warm shoulders.' },
+        { name: 'Light Squat Jumps', reps: '8 reps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Small squat jumps focusing on soft landings. Jump only 6-12 inches high for activation.' },
+        { name: 'Shoulder Squeezes', reps: '12 reps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Squeeze shoulder blades together, hold 2 seconds. Activates postural muscles.' },
+        { name: 'Leg Swings', reps: '10/leg', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Hold wall for balance, swing leg forward/back then side to side. Mobilizes hip joints.' },
+        { name: 'Torso Twists', reps: '12 each', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Rotate torso left and right keeping hips forward. Warms spine and core.' },
+        { name: 'Marching', reps: '30 steps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'March bringing knees to waist height. Gradually increase pace, activates core.' },
+        { name: 'Sun Salutation Flow', reps: '8-10 flows', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Mountain pose → forward fold → half lift → low lunge → downward dog → cobra → back to mountain. Warms entire body with flowing movement.' },
+        { name: 'Cat-Cow Warm-Up', reps: '12 reps', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'On hands and knees, arch back (cow) then round spine (cat). Mobilizes spine and activates core for movement.' },
+        { name: 'Hip Circles', reps: '10/dir', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Hands on hips, make large circles. Keep feet planted, mobilizes hip joints.' },
+        { name: 'Dynamic Warrior Flow', reps: '6/side', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Step back to warrior I, flow to warrior III (standing balance), return to warrior I. Activates legs, core, and balance systems.' },
+        { name: 'Ankle Pumps', reps: '20/foot', weight: 'bodyweight', time: '2 rounds', rest: 'flow', description: 'Point toes down then flex up. Activates calves and improves circulation.' }
     ],
     mobility: [
         { name: 'Cat-Cow Stretches', reps: '8 reps', weight: 'bodyweight', time: '3 rounds', rest: '20s', description: 'Arch back (cow) then round spine (cat). Mobilizes entire spine and relieves tension.' },
