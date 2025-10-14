@@ -154,7 +154,7 @@ document
 document
 .getElementById("closeModal")
 .addEventListener("click", () =>
-  document.getElementById("equipmentModal").classList.add("hidden")
+document.getElementById("equipmentModal").classList.add("hidden")
 );
 
 updateApp();
@@ -888,10 +888,10 @@ document.getElementById("exerciseSelection").innerHTML = w.phases
     `;
 })// Strong Women Workout Builder JavaScript
 let selectedWeek = 1, 
-selectedDay = 'monday', 
-selectedDuration = 'standard', 
-selectedLocation = 'home', 
-trainingWeek = 1;;
+  selectedDay = 'monday', 
+  selectedDuration = 'standard', 
+  selectedLocation = 'home', 
+  trainingWeek = 1;
 let userEquipment = { home: {}, gym: {} };
 let workoutSelections = {},
 completedExercises = {},
@@ -2187,43 +2187,43 @@ cooldown: {
 };
 
 function calculateRounds(phase, selectedExercises) {
-  const targetTime = getPhaseTargetTime(phase);
-  const exerciseCount = selectedExercises.length;
-  
-  if (exerciseCount === 0) return {};
-  
-  // Special case for Tabata Squats - always 8 rounds unless custom override
-  if (exerciseCount === 1 && selectedExercises[0] === 'Tabata Squats') {
-      const customKey = `${selectedWeek}-${selectedDay}-${phase}-Tabata Squats`;
-      const baseRounds = customRounds[customKey] || 8;
-      // Apply deload reduction if Week 4
-      return { 'Tabata Squats': trainingWeek === 4 ? Math.ceil(baseRounds * 0.6) : baseRounds };
-  }
-  
-  const timePerExercise = targetTime / exerciseCount;
-  const rounds = {};
-  
-  selectedExercises.forEach(exerciseName => {
-      const customKey = `${selectedWeek}-${selectedDay}-${phase}-${exerciseName}`;
-      
-      if (customRounds[customKey] !== undefined) {
-          // Use custom rounds if set, but still respect safety limits and apply deload
-          const maxRounds = exerciseMaxRounds[phase]?.[exerciseName] || 6;
-          const baseRounds = Math.min(customRounds[customKey], maxRounds);
-          // Apply deload: reduce by 40% for Week 4
-          rounds[exerciseName] = trainingWeek === 4 ? Math.ceil(baseRounds * 0.6) : baseRounds;
-      } else {
-          // Calculate default rounds with safety limits
-          const baseTime = exerciseBaseTimes[phase]?.[exerciseName] || 2;
-          const calculatedRounds = Math.max(1, Math.round(timePerExercise / baseTime));
-          const maxRounds = exerciseMaxRounds[phase]?.[exerciseName] || 6;
-          const baseRounds = Math.min(calculatedRounds, maxRounds);
-          // Apply deload: reduce by 40% for Week 4
-          rounds[exerciseName] = trainingWeek === 4 ? Math.ceil(baseRounds * 0.6) : baseRounds;
-      }
-  });
-  
-  return rounds;
+    const targetTime = getPhaseTargetTime(phase);
+    const exerciseCount = selectedExercises.length;
+    
+    if (exerciseCount === 0) return {};
+    
+    // Special case for Tabata Squats - always 8 rounds unless custom override
+    if (exerciseCount === 1 && selectedExercises[0] === 'Tabata Squats') {
+        const customKey = `${selectedWeek}-${selectedDay}-${phase}-Tabata Squats`;
+        const baseRounds = customRounds[customKey] || 8;
+        // Apply deload reduction if Week 4
+        return { 'Tabata Squats': trainingWeek === 4 ? Math.ceil(baseRounds * 0.6) : baseRounds };
+    }
+    
+    const timePerExercise = targetTime / exerciseCount;
+    const rounds = {};
+    
+    selectedExercises.forEach(exerciseName => {
+        const customKey = `${selectedWeek}-${selectedDay}-${phase}-${exerciseName}`;
+        
+        if (customRounds[customKey] !== undefined) {
+            // Use custom rounds if set, but still respect safety limits and apply deload
+            const maxRounds = exerciseMaxRounds[phase]?.[exerciseName] || 6;
+            const baseRounds = Math.min(customRounds[customKey], maxRounds);
+            // Apply deload: reduce by 40% for Week 4
+            rounds[exerciseName] = trainingWeek === 4 ? Math.ceil(baseRounds * 0.6) : baseRounds;
+        } else {
+            // Calculate default rounds with safety limits
+            const baseTime = exerciseBaseTimes[phase]?.[exerciseName] || 2;
+            const calculatedRounds = Math.max(1, Math.round(timePerExercise / baseTime));
+            const maxRounds = exerciseMaxRounds[phase]?.[exerciseName] || 6;
+            const baseRounds = Math.min(calculatedRounds, maxRounds);
+            // Apply deload: reduce by 40% for Week 4
+            rounds[exerciseName] = trainingWeek === 4 ? Math.ceil(baseRounds * 0.6) : baseRounds;
+        }
+    });
+    
+    return rounds;
 }
 
 function adjustRounds(phase, exerciseName, action) {
